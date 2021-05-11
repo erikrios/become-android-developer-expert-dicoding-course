@@ -2,7 +2,10 @@ package io.github.erikrios.mysimplecleanarchitecture
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import io.github.erikrios.mysimplecleanarchitecture.databinding.ActivityMainBinding
+import io.github.erikrios.mysimplecleanarchitecture.presentation.MainViewModel
+import io.github.erikrios.mysimplecleanarchitecture.presentation.MainViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,5 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val factory = MainViewModelFactory.getInstance()
+        val viewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
+
+        viewModel.setName("Dicoding")
+        viewModel.message.observe(this, {
+            binding.tvWelcome.text = it.welcomeMessage
+        })
     }
 }
