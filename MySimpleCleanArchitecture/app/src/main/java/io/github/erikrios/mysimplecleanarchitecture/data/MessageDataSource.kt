@@ -1,6 +1,6 @@
-package io.github.erikrios.mysimplecleanarchitecture.domain
+package io.github.erikrios.mysimplecleanarchitecture.data
 
-import io.github.erikrios.mysimplecleanarchitecture.data.IMessageDataSource
+import io.github.erikrios.mysimplecleanarchitecture.domain.MessageEntity
 
 class MessageDataSource : IMessageDataSource {
     override fun getMessageFromSource(name: String) =
