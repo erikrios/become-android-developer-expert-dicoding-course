@@ -1,11 +1,9 @@
-package io.github.erikrios.mysimplecleanarchitecture
+package io.github.erikrios.mysimplecleanarchitecture.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import io.github.erikrios.mysimplecleanarchitecture.databinding.ActivityMainBinding
-import io.github.erikrios.mysimplecleanarchitecture.presentation.MainViewModel
-import io.github.erikrios.mysimplecleanarchitecture.presentation.MainViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
