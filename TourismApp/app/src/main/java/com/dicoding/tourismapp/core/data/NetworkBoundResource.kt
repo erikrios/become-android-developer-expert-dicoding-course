@@ -39,5 +39,5 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
 
     protected abstract suspend fun saveCallResult(data: RequestType)
 
-    fun asFlowable(): Flow<Resource<ResultType>> = result
+    fun asFlow(): Flow<Resource<ResultType>> = result
 }
