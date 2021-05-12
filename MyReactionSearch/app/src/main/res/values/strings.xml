@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MyReactionSearch</string>
+    <string name="app_name">My Reaction Search</string>
+    <string name="your_place">Lokasi Kamu</string>
 </resources>
