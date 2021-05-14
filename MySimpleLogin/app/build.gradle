@@ -45,6 +45,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "org.koin:koin-core:2.1.6"
     implementation "org.koin:koin-android:2.1.6"
+    implementation "com.google.dagger:dagger:2.29.1"
+    kapt "com.google.dagger:dagger-compiler:2.29.1"
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
