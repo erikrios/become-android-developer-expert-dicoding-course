@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.mysimplelogin.databinding.ActivityMainBinding
+import io.github.erikrios.core.SessionManager
+import io.github.erikrios.core.UserRepository
 
 class MainActivity : AppCompatActivity() {
 

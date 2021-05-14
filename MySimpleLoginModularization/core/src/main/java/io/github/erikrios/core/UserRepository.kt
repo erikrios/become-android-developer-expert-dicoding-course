@@ -1,4 +1,4 @@
-package com.dicoding.mysimplelogin
+package io.github.erikrios.core
 
 class UserRepository(private val sesi: SessionManager) {
 
