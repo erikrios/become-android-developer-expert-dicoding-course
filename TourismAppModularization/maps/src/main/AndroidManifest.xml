@@ -14,7 +14,15 @@
     </dist:module>
 
     <application>
-        <activity android:name=".MapsActivity"></activity>
+        <activity android:name=".MapsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="maps"
+                    android:scheme="tourismapp" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
