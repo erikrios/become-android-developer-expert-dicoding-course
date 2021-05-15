@@ -2,6 +2,7 @@ package com.dicoding.mysimplelogin
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.mysimplelogin.databinding.ActivityHomeBinding
 import io.github.erikrios.core.SessionManager
@@ -26,10 +27,23 @@ class HomeActivity : AppCompatActivity() {
             userRepository.logoutUser()
             moveToMainActivity()
         }
+
+        binding.fab
+            .setOnClickListener {
+                try {
+                    moveToChatActivity()
+                } catch (e: Exception) {
+                    Toast.makeText(this, "Module not found", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun moveToMainActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+
+    private fun moveToChatActivity() {
+        startActivity(Intent(this, Class.forName("com.dicoding.mysimplelogin.chat.ChatActivity")))
     }
 }
