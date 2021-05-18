@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnCrash.setOnClickListener {
             FirebaseCrashlytics.getInstance().log("Clicked on button")
+            FirebaseCrashlytics.getInstance().setCustomKey("str_key", "some_data")
             throw RuntimeException("Test Crash")
         }
     }
