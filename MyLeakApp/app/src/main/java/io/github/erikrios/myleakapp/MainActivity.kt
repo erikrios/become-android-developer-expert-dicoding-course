@@ -44,4 +44,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         registerBroadcastReceiver()
     }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(broadcastReceiver)
+    }
 }
