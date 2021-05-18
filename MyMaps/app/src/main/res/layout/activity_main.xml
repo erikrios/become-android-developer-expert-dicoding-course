@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:mapbox_cameraTargetLat="0"
         app:mapbox_cameraTargetLng="118"
-        app:mapbox_cameraZone="2.6" />
+        app:mapbox_cameraZoom="2.6" />
 
     <Button
         android:id="@+id/btn_navigation"
