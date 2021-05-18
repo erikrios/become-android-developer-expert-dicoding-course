@@ -4,7 +4,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://mapbox.bintray.com/mapbox' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.1"
@@ -19,6 +18,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://mapbox.bintray.com/mapbox' }
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
