@@ -28,7 +28,6 @@ buildscript {
 
     ext.lottie_version = "3.4.1"
 
-
     repositories {
         google()
         jcenter()
