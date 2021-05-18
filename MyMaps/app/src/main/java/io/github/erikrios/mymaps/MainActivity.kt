@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
 
                 showDicodingSpace()
                 showMyLocation(style)
+                addMarkerOnClick()
             }
         }
     }
@@ -120,6 +121,20 @@ class MainActivity : AppCompatActivity() {
                 }
             })
             permissionManager.requestLocationPermissions(this)
+        }
+    }
+
+    private fun addMarkerOnClick() {
+        mapBoxMap.addOnMapClickListener { point ->
+            symbolManager.deleteAll()
+
+            symbolManager.create(
+                SymbolOptions()
+                    .withLatLng(LatLng(point.latitude, point.longitude))
+                    .withIconImage(ICON_ID)
+                    .withDraggable(true)
+            )
+            true
         }
     }
 
